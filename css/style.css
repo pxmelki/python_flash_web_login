@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.login-container {
+    background: #fff;
+    padding: 36px 32px 28px 32px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(30,41,59,0.18), 0 1.5px 8px rgba(25, 118, 210, 0.08);
+    width: 100%;
+    max-width: 370px;
+    margin: 40px auto;
+    transition: box-shadow 0.2s;
+    text-align: center;
+    animation: fadeIn 0.8s cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px) scale(0.97);}
+    to   { opacity: 1; transform: translateY(0) scale(1);}
+}
+.login-container:hover {
+    box-shadow: 0 12px 40px rgba(25,118,210,0.22), 0 2px 12px rgba(30,41,59,0.10);
+}
+h2 {
+    margin-bottom: 22px;
+    color: #1976d2;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form .form-label, label {
+    font-size: 15px;
+    color: #35424a;
+    margin-bottom: 4px;
+    text-align: left;
+}
+input[type="text"], input[type="password"], input.form-control {
+    padding: 10px;
+    border: 1.5px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+input[type="text"]:focus, input[type="password"]:focus, input.form-control:focus {
+    border: 1.5px solid #1976d2;
+    box-shadow: 0 0 0 2px #1976d233;
+}
+input[type="submit"], .btn-primary {
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    padding: 10px 0;
+    border-radius: 6px;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+input[type="submit"]:hover, .btn-primary:hover {
+    background: #0d47a1;
+}
+.show-hide-btn {
+    border: none;
+    background: none;
+    color: #1976d2;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 0 8px;
+}
+.error, .alert-danger {
+    color: #e8491d;
+    margin-top: 14px;
+    font-size: 15px;
+    font-weight: 500;
+}
+@media (max-width: 500px) {
+    .login-container {
+        padding: 18px 6vw 14px 6vw;
+        max-width: 98vw;
+    }
+}
